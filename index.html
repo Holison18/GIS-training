@@ -19,9 +19,9 @@
     <script src="https://js.arcgis.com/4.26/"></script>
 
     <script>
-      require(["esri/config", "esri/Map", "esri/views/MapView","esri/widgets/BasemapToggle","esri/widgets/BasemapGallery"], function(esriConfig, Map, MapView,BasemapToggle, BasemapGallery) {
+      require(["esri/config", "esri/Map", "esri/views/MapView","esri/widgets/BasemapToggle","esri/widgets/BasemapGallery","esri/widgets/Search"], function(esriConfig, Map, MapView,BasemapToggle, BasemapGallery,Search                                                                                                              ) {
 
-        esriConfig.apiKey = "YOUR_API_KEY";
+        esriConfig.apiKey = "AAPKc4bdd8bea48c445986d16a215a81a465HnEw7V2UySNBQio0lK6KaNjZ-rMh6K9oa1Wx01VK_dK5XqOTNpLCorqTgvj5SlOT";
 
         const map = new Map({
           basemap: "arcgis-topographic" // Basemap layer service
@@ -52,6 +52,12 @@
 
       view.ui.add(basemapGallery, "top-right"); // Add to the view
       });
+
+      const search = new Search({  //Add Search widget
+        view: view
+      });
+
+      view.ui.add(search, "top-right"); //Add to the map
     </script>
 
   </head>
